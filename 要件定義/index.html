@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const members = (name,age,hobby) => {
+        //     document.write(`私の名前は${name}です。年は${age}歳です。趣味は${hobby}です。<br>`);
+        // };
+        // members('山田太郎',42,'ギター');
+        // members('斎藤すぐる',46,'車');
+        // members('田中よしお',32,'旅行、カメラ');
+        // members('高橋とおる',25,'絵を書くこと');
+
+        let members = [
+            { name:'山田',age:42,hobby:'ギター'},
+            { name:'斎藤',age:46,hobby:'車'},
+            { name:'田中',age:32,hobby:'旅行、カメラ'},
+            { name:'高橋',age:25,hobby:'絵を書くこと'}
+        ];
+        members.forEach((value) =>{
+            document.write(`私の名前は${value.name}です。`);
+            document.write(`年は${value.age}です。`);
+            document.write(`趣味は${value.hobby}です。<br>`);
+        });
+
+        let twenty = members.filter((value)=>{
+            return value.age >= 20 && value.age < 30;
+        });
+
+        document.write('20代 <br>');
+        twenty.forEach((value)=>{
+            document.write(`私の名前は${value.name}です。<br>`)
+        })
+
+        let thirty =members.filter((value)=>{
+            return value.age >= 30 && value.age <40;
+        });
+
+        document.write('30代 <br>');
+        thirty.forEach((value)=>{
+            document.write(`私の名前は${value.name}です。<br>`)
+        })
+
+        let forty =members.filter((value)=>{
+            return value.age >= 40 && value.age <50;
+        });
+
+        document.write('40代 <br>');
+        forty.forEach((value)=>{
+            document.write(`私の名前は${value.name}です。<br>`)
+        });
+
+    </script>
+</body>
+</html>

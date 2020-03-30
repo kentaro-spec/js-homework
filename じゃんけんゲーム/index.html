@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const janken = window.prompt("グー・チョキ・パーのいずれかを入力してください。")
+
+        switch (janken){
+            case 'グー':
+            document.write('おめでとうございます！あなたの勝ちです。');
+            break;
+            case 'チョキ':
+            document.write('惜しい、引き分けでした！');
+            break;
+            case 'パー':
+            document.write('残念、あなたの負けです。もう一度挑戦してください！');
+            break;
+        }
+    </script>
+</body>
+</html>
