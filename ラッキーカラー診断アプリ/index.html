@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style> 
+   .btn{
+       color: #ffffff;
+       background-color: #000000;
+       box-shadow: 0px 4px 0px #dddddd;
+       transition: 0.2s all ease 0s;
+       padding: 8px;
+       width: 340px;
+       font-size: 14px;
+       border-radius: 5px;
+       }
+    .btn:hover{
+        box-shadow:none;
+        transform: translate3d(0,3px,0);
+    }
+    </style>
+</head>
+<body>
+    <button id="js-btn" class="btn">今日のラッキーカラーは、、、</button>
+    
+    <script>
+        let btn = document.getElementById("js-btn");
+        let colors =['red','blue','green','yellow','pink'];
+        let number = Math.floor(Math.random() * colors.length);
+        
+        btn.addEventListener('click',function(){
+          let random = colors[number];
+            switch(random){
+                case 'red':
+                    btn.innerText = "赤色です！";
+                    btn.style.backgroundColor ="red";
+                    break;
+                case 'blue':
+                    btn.innerText = "青色です！";
+                    btn.style.backgroundColor= "blue";
+                    break;
+                case 'green':
+                    btn.innerText = "緑色です！";
+                    btn.style.backgroundColor= "green";
+                    break;
+                case 'yellow':
+                    btn.innerText = "黄色です！";
+                    btn.style.backgroundColor = "yellow";
+                    break;
+                case 'pink':
+                    btn.innerText = "ピンク色です！";
+                    btn.style.backgroundColor = "pink";
+                    break;
+            }
+        },false);
+    </script>
+</body>
+</html>

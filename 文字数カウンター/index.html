@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form>
+        <textarea id="area1" cols="30" rows="10" onkeyup="countLength();"></textarea>
+        <p id="textlength">0文字</p>
+    </form>
+    
+    <script>   
+        function countLength(){
+        var len = document.getElementById("area1").value.replace(/\s/g,"").length;
+        document.getElementById("textlength").innerText = len + '文字';
+
+        if(len >= 10){
+            let gettextlength = document.getElementById("textlength");
+            gettextlength.innerText = '10文字以内にしてください。';
+            gettextlength.style.color = 'red';
+            
+        }else{
+            document.getElementById("textlength").innerText = len + '文字';
+        }
+    }
+    </script>
+  
+</body>
+</html>
