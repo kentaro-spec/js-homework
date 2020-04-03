@@ -14,18 +14,20 @@
     
     <script>   
         function countLength(){
-        var len = document.getElementById("area1").value.replace(/\s/g,"").length;
-        document.getElementById("textlength").innerText = len + '文字';
+            //処理を変数にまとめる
+            const len = document.getElementById("area1").value.replace(/\s/g, "").length;
+            const str = document.getElementById("textlength");
+            str.innerText = len + '文字';
 
-        if(len >= 10){
-            let gettextlength = document.getElementById("textlength");
-            gettextlength.innerText = '10文字以内にしてください。';
-            gettextlength.style.color = 'red';
-            
-        }else{
-            document.getElementById("textlength").innerText = len + '文字';
+            if(len >= 10){
+                str.innerText = '10文字以内にしてください。';
+                str.style.color = 'red';
+
+            }else if(len < 10){
+                document.getElementById("textlength").innerText = len + '文字';
+                str.style.color = '#333';
+            }
         }
-    }
     </script>
   
 </body>
